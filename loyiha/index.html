@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Modal</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black min-h-screen flex items-center justify-center">
+
+
+  <div class="fixed inset-0 bg-black/90 backdrop-blur-sm"></div>
+
+  <div class="relative z-10 w-full max-w-sm rounded-2xl bg-[#11181c] p-8 shadow-2xl">
+
+    
+    <button
+      class="absolute right-5 top-4 text-white text-xl hover:text-orange-400 transition"
+    >
+      ×
+    </button>
+
+    
+    <h1 class="text-white text-2xl font-bold uppercase">
+      Получить предложение
+    </h1>
+
+    <p class="text-gray-400 text-sm mt-4 leading-6">
+      Пожалуйста, укажите свои данные.
+      Наш менеджер свяжется с вами в течение 15 минут.
+    </p>
+
+    
+    <form class="mt-8 space-y-5" onsubmit="login(event)">
+
+    
+      <div>
+        <label class="text-gray-400 text-sm">
+          Модель
+        </label>
+
+        <select
+          id="model"
+          class="w-full mt-2 bg-transparent border border-gray-600 rounded-lg px-4 py-3 text-white outline-none focus:border-orange-400"
+        >
+          <option value="">Выберите модель</option>
+          <option value="BMW">BMW</option>
+          <option value="Mercedes">Mercedes</option>
+          <option value="Audi">Audi</option>
+        </select>
+      </div>
+
+     
+      <div>
+        <label class="text-gray-400 text-sm">
+          Телефон
+        </label>
+
+        <input
+          type="number"
+          id="phone"
+          placeholder="+7 (___) ___-__-__"
+          class="w-full mt-2 bg-transparent border border-gray-600 rounded-lg px-4 py-3 text-white outline-none focus:border-orange-400"
+        />
+      </div>
+
+     
+      <button
+        type="submit"
+        class="w-full bg-orange-400 hover:bg-orange-500 transition rounded-lg py-3 text-black font-semibold"
+      >
+        Получить предложение →
+      </button>
+
+      
+      <label class="flex items-center gap-2 text-gray-400 text-sm">
+        <input type="checkbox" required />
+        Согласен на обработку персональных данных.
+      </label>
+
+    </form>
+  </div>
+
+  <script>
+
+    function login(event) {
+
+      event.preventDefault();
+
+      let model = document.getElementById("model").value;
+      let phone = document.getElementById("phone").value;
+
+      // TEKSHIRISH
+      if(model !== "" && phone.length > 5) {
+
+        // LOGIN SAQLANADI
+        localStorage.setItem("login", "true");
+
+        // HOME PAGE
+        window.location.href = "home.html";
+
+      } else {
+
+        alert("Ma'lumotlarni to'ldiring!");
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
