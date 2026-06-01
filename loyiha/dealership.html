@@ -4,124 +4,170 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Дилерская секция — Подберите комплектацию</title>
-  <link rel="stylesheet" href="dealership.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#111111',
+            card: '#161616',
+            muted: '#bfbfbf',
+            orange: '#ff7a00',
+          },
+          fontFamily: {
+            inter: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <section class="dealership">
-    <div class="container">
-      <h1 class="title">ПОДБЕРИТЕ КОМПЛЕКТАЦИЮ</h1>
+<body class="bg-bg text-white font-inter min-h-screen antialiased">
 
-      <div class="filters">
-        <select aria-label="Выбор модели">
+  <section class="dealership">
+    <div class="w-full max-w-[1200px] mx-auto my-10 px-10">
+
+      <!-- Sarlavha -->
+      <h1 class="text-center text-[42px] tracking-widest font-extrabold mb-7 uppercase">
+        ПОДБЕРИТЕ КОМПЛЕКТАЦИЮ
+      </h1>
+
+      <!-- Filtrlar -->
+      <div class="flex gap-4 justify-center mb-8 flex-wrap">
+        <select aria-label="Выбор модели"
+          class="bg-[#0f0f0f] text-white border border-[#222] px-4 py-3 rounded-lg min-w-[260px]">
           <option>Модель: TANK 300</option>
           <option>Модель: TANK 500</option>
         </select>
-        <select aria-label="Выбор двигателя">
+        <select aria-label="Выбор двигателя"
+          class="bg-[#0f0f0f] text-white border border-[#222] px-4 py-3 rounded-lg min-w-[260px]">
           <option>Двигатель: 2.0 л</option>
           <option>Двигатель: 2.4 л</option>
         </select>
-        <select aria-label="Выбор трансмиссии">
+        <select aria-label="Выбор трансмиссии"
+          class="bg-[#0f0f0f] text-white border border-[#222] px-4 py-3 rounded-lg min-w-[260px]">
           <option>Трансмиссия: Автоматическая</option>
           <option>Трансмиссия: Механическая</option>
         </select>
       </div>
 
-      <div class="cards">
+      <!-- Kartalar -->
+      <div class="flex flex-col gap-5">
 
-        <!-- Card (repeated 3 times) -->
-        <article class="card">
-          <div class="card-left">
-            <img src="/loyiha/img/93264d53057fa8363f55660f5d0bcc11b670bb50.png" alt="Tank 300 left side">
+        <!-- Card 1 -->
+        <article class="flex bg-card rounded-xl p-5 items-center gap-6 shadow-[0_6px_24px_rgba(0,0,0,0.6)]">
+          <div class="flex-none w-[420px] h-[220px] flex items-center justify-center">
+            <img src="/loyiha/img/93264d53057fa8363f55660f5d0bcc11b670bb50.png"
+              alt="Tank 300 left side" class="max-w-full max-h-full object-contain">
           </div>
-          <div class="card-right">
-            <div class="heading">
-              <div class="model">TANK 300</div>
-              <div class="spec">2.0 л. Бензин. Полный. Автоматическая</div>
+          <div class="flex-1 flex flex-col gap-3">
+            <div class="flex flex-col">
+              <div class="text-[28px] font-extrabold">TANK 300</div>
+              <div class="text-[15px] text-muted mt-1">2.0 л. Бензин. Полный. Автоматическая</div>
             </div>
-
-            <div class="price-row">
-              <div class="price">3 649 000 ₽</div>
-              <div class="actions">
-                <button class="btn orange">Получить предложение →</button>
-                <button class="btn outline">Тест-драйв →</button>
+            <div class="flex items-center justify-between mt-2">
+              <div class="text-[34px] font-extrabold">3 649 000 ₽</div>
+              <div class="flex flex-col gap-2 min-w-[240px]">
+                <button class="inline-flex items-center justify-center px-4 py-3 rounded-xl font-bold bg-orange text-white cursor-pointer border-0">
+                  Получить предложение →
+                </button>
+                <button class="inline-flex items-center justify-center px-4 py-3 rounded-xl font-bold bg-transparent border-2 border-orange/20 text-orange cursor-pointer">
+                  Тест-драйв →
+                </button>
               </div>
             </div>
-
-            <div class="extra">
-              <div class="trade">Выгода по Trade-in до 450 000 ₽</div>
-              <div class="gift">Керамическое покрытие в подарок!</div>
+            <div class="flex gap-4 text-muted text-[13px] mt-2">
+              <div>Выгода по Trade-in до 450 000 ₽</div>
+              <div>Керамическое покрытие в подарок!</div>
             </div>
           </div>
         </article>
 
-        <article class="card">
-          <div class="card-left">
-            <img src="/loyiha/img/93264d53057fa8363f55660f5d0bcc11b670bb50.png" alt="Tank 300 left side">
+        <!-- Card 2 -->
+        <article class="flex bg-card rounded-xl p-5 items-center gap-6 shadow-[0_6px_24px_rgba(0,0,0,0.6)]">
+          <div class="flex-none w-[420px] h-[220px] flex items-center justify-center">
+            <img src="/loyiha/img/93264d53057fa8363f55660f5d0bcc11b670bb50.png"
+              alt="Tank 300 left side" class="max-w-full max-h-full object-contain">
           </div>
-          <div class="card-right">
-            <div class="heading">
-              <div class="model">TANK 300</div>
-              <div class="spec">2.0 л. Бензин. Полный. Автоматическая</div>
+          <div class="flex-1 flex flex-col gap-3">
+            <div class="flex flex-col">
+              <div class="text-[28px] font-extrabold">TANK 300</div>
+              <div class="text-[15px] text-muted mt-1">2.0 л. Бензин. Полный. Автоматическая</div>
             </div>
-
-            <div class="price-row">
-              <div class="price">3 649 000 ₽</div>
-              <div class="actions">
-                <button class="btn orange">Получить предложение →</button>
-                <button class="btn outline">Тест-драйв →</button>
+            <div class="flex items-center justify-between mt-2">
+              <div class="text-[34px] font-extrabold">3 649 000 ₽</div>
+              <div class="flex flex-col gap-2 min-w-[240px]">
+                <button class="inline-flex items-center justify-center px-4 py-3 rounded-xl font-bold bg-orange text-white cursor-pointer border-0">
+                  Получить предложение →
+                </button>
+                <button class="inline-flex items-center justify-center px-4 py-3 rounded-xl font-bold bg-transparent border-2 border-orange/20 text-orange cursor-pointer">
+                  Тест-драйв →
+                </button>
               </div>
             </div>
-
-            <div class="extra">
-              <div class="trade">Выгода по Trade-in до 450 000 ₽</div>
-              <div class="gift">Керамическое покрытие в подарок!</div>
+            <div class="flex gap-4 text-muted text-[13px] mt-2">
+              <div>Выгода по Trade-in до 450 000 ₽</div>
+              <div>Керамическое покрытие в подарок!</div>
             </div>
           </div>
         </article>
 
-        <article class="card">
-          <div class="card-left">
-            <img src="/loyiha/img/93264d53057fa8363f55660f5d0bcc11b670bb50.png" alt="Tank 300 left side">
+        <!-- Card 3 -->
+        <article class="flex bg-card rounded-xl p-5 items-center gap-6 shadow-[0_6px_24px_rgba(0,0,0,0.6)]">
+          <div class="flex-none w-[420px] h-[220px] flex items-center justify-center">
+            <img src="/loyiha/img/93264d53057fa8363f55660f5d0bcc11b670bb50.png"
+              alt="Tank 300 left side" class="max-w-full max-h-full object-contain">
           </div>
-          <div class="card-right">
-            <div class="heading">
-              <div class="model">TANK 300</div>
-              <div class="spec">2.0 л. Бензин. Полный. Автоматическая</div>
+          <div class="flex-1 flex flex-col gap-3">
+            <div class="flex flex-col">
+              <div class="text-[28px] font-extrabold">TANK 300</div>
+              <div class="text-[15px] text-muted mt-1">2.0 л. Бензин. Полный. Автоматическая</div>
             </div>
-
-            <div class="price-row">
-              <div class="price">3 649 000 ₽</div>
-              <div class="actions">
-                <button class="btn orange">Получить предложение →</button>
-                <button class="btn outline">Тест-драйв →</button>
+            <div class="flex items-center justify-between mt-2">
+              <div class="text-[34px] font-extrabold">3 649 000 ₽</div>
+              <div class="flex flex-col gap-2 min-w-[240px]">
+                <button class="inline-flex items-center justify-center px-4 py-3 rounded-xl font-bold bg-orange text-white cursor-pointer border-0">
+                  Получить предложение →
+                </button>
+                <button class="inline-flex items-center justify-center px-4 py-3 rounded-xl font-bold bg-transparent border-2 border-orange/20 text-orange cursor-pointer">
+                  Тест-драйв →
+                </button>
               </div>
             </div>
-
-            <div class="extra">
-              <div class="trade">Выгода по Trade-in до 450 000 ₽</div>
-              <div class="gift">Керамическое покрытие в подарок!</div>
+            <div class="flex gap-4 text-muted text-[13px] mt-2">
+              <div>Выгода по Trade-in до 450 000 ₽</div>
+              <div>Керамическое покрытие в подарок!</div>
             </div>
           </div>
         </article>
 
       </div>
 
-      <div class="load-more-wrap">
-        <button class="btn dark">Загрузить еще</button>
+      <!-- Ko'proq yuklash -->
+      <div class="flex justify-center my-6">
+        <button class="inline-flex items-center justify-center px-5 py-3 rounded-xl font-bold bg-[#1b1b1b] text-white cursor-pointer border-0">
+          Загрузить еще
+        </button>
       </div>
 
-      <div class="promo">
-        <div class="promo-left">
-          <img src="/loyiha/img/93264d53057fa8363f55660f5d0bcc11b670bb50.png" alt="Tank 300 with bow">
+      <!-- Promo banner -->
+      <div class="flex items-center gap-7 mt-9 bg-gradient-to-b from-white/[0.02] to-transparent p-5 rounded-xl flex-wrap">
+        <div class="flex-none w-[420px] h-[260px] flex items-center justify-center">
+          <img src="/loyiha/img/efaab89fc21d311adf0df470ad1e3397ce3de2d5.png"
+            alt="Tank 300 with bow" class="max-w-full max-h-full object-contain">
         </div>
-        <div class="promo-right">
-          <div class="promo-title">ОБМЕН ПО TRADE-IN НА ВЫГОДНЫХ УСЛОВИЯХ</div>
-          <button class="btn orange large">Отправить заявку →</button>
+        <div class="flex-1 flex flex-col gap-4 p-4">
+          <div class="text-[26px] font-extrabold uppercase">ОБМЕН ПО TRADE-IN НА ВЫГОДНЫХ УСЛОВИЯХ</div>
+          <button class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold text-[16px] bg-orange text-white cursor-pointer border-0 w-fit">
+            Отправить заявку →
+          </button>
         </div>
       </div>
 
     </div>
   </section>
+
 </body>
 </html>
