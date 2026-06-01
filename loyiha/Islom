@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Оставьте заявку на кредит</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --bg: #090a0c;
+      --surface: #111316;
+      --surface-strong: #0d1012;
+      --border: rgba(15, 194, 211, 0.24);
+      --orange: #f68b2c;
+      --orange-strong: #ff9d46;
+      --text: #f4f5f6;
+      --muted: #7d8a97;
+      --panel: rgba(17, 19, 22, 0.92);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .btn-orange {
+      background: var(--orange);
+      color: #090a0c;
+      transition: background 0.2s ease;
+    }
+
+    .btn-orange:hover {
+      background: var(--orange-strong);
+    }
+
+    .hero-section {
+      background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.86)),
+        url('/d236b4001fee6d091d642a6b452d2aeb69b8dfb6\ \(1\).png');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--border);
+      pointer-events: none;
+    }
+
+    .map-panel {
+      background: var(--panel);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+    }
+
+    .section-divider {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .text-muted {
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="relative overflow-hidden">
+    <section class="hero-section relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,194,211,0.16),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(246,139,44,0.14),transparent_24%)] pointer-events-none"></div>
+      <div class="relative mx-auto max-w-[1320px] px-6 lg:px-10 py-16 lg:py-20">
+        <div class="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] items-center">
+          <div class="max-w-2xl">
+            <p class="text-sm uppercase tracking-[0.35em] text-cyan-300/70 mb-4">Премиальное кредитование</p>
+            <h1 class="text-5xl sm:text-[4.25rem] lg:text-[5rem] font-black leading-[0.92] tracking-[-0.04em]">ОСТАВЬТЕ ЗАЯВКУ НА КРЕДИТ</h1>
+            <p class="mt-6 max-w-xl text-base leading-7 text-gray-300">Оставьте заявку — мы подберём индивидуальные условия по автокредиту на лучшие премиальные модели. Ответ в течение 15 минут.</p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <label class="sr-only" for="phone">Telefon</label>
+              <input id="phone" type="tel" placeholder="+998 (___) ___-__-__" class="min-w-0 flex-1 rounded-[28px] border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-gray-500 focus:border-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-300/20" />
+              <button class="btn-orange rounded-[28px] px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em]">Отправить</button>
+            </div>
+          </div>
+          <div class="h-[420px] sm:h-[480px] lg:h-[520px]"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="mx-auto max-w-[1320px] px-6 lg:px-10 mt-8">
+      <div class="map-panel rounded-[36px] border border-white/10 p-6 sm:p-8 lg:p-10 flex flex-col gap-8 lg:flex-row items-center justify-between">
+        <div class="max-w-2xl">
+          <h2 class="text-2xl sm:text-3xl font-black leading-tight">ИНДИВИДУАЛЬНОЕ ПРЕДЛОЖЕНИЕ ДЛЯ КОРПОРАТИВНЫХ КЛИЕНТОВ</h2>
+          <button class="mt-6 btn-orange rounded-full px-9 py-4 text-sm font-semibold uppercase tracking-[0.12em]">Получить предложение</button>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="h-20 w-20 overflow-hidden rounded-full border border-white/10 bg-[#181b1e]">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" alt="Консультант" class="h-full w-full object-cover" />
+          </div>
+          <div>
+            <p class="text-base font-semibold">Алина Петрова</p>
+            <p class="mt-1 text-sm text-gray-500">Персональный корпоративный менеджер</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="map-section" class="mt-10">
+      <div class="relative mx-auto max-w-[1320px] px-6 lg:px-10">
+        <div class="relative">
+          <input id="location-toggle" type="checkbox" class="peer hidden" />
+          <div class="relative overflow-hidden rounded-[36px] border border-white/10 bg-[#101316] transition duration-700 ease-in-out">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1800&auto=format&fit=crop&sat=-100" alt="Map" class="h-[540px] w-full object-cover object-center brightness-[0.45] contrast-[0.85] transition duration-700 ease-in-out transform peer-checked:scale-105 peer-checked:brightness-90 peer-checked:contrast-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#090a0c]/92 via-transparent to-transparent"></div>
+            <label for="location-toggle" class="absolute inset-0 cursor-pointer" aria-label="Открыть карту"></label>
+            <label for="location-toggle" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500/95 ring-4 ring-[#111316] shadow-[0_0_0_8px_rgba(0,0,0,0.38)] transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
+              <span class="h-3.5 w-3.5 rounded-full bg-white/90"></span>
+            </label>
+          </div>
+
+
+          <div class="overflow-hidden transition-all duration-700 ease-in-out transform scale-[0.98] opacity-0 max-h-0 peer-checked:opacity-100 peer-checked:scale-100 peer-checked:max-h-[690px] peer-checked:mt-6">
+            <div class="map-panel rounded-[32px] p-6 lg:p-8 mt-4 shadow-[0_32px_80px_rgba(0,0,0,0.36)] bg-[#121418] border border-white/10 flex flex-col gap-6">
+              <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+                <div class="min-w-0">
+                  <p class="text-sm uppercase tracking-[0.24em] text-cyan-300/70 mb-2">Офис и сервис</p>
+                  <h3 class="text-2xl font-black leading-tight">Москва, Ленинградский проспект, 36</h3>
+                  <div class="mt-4 space-y-2 text-sm text-gray-400">
+                    <p>+998 (99) 123-45-67</p>
+                    <p>Пн–Пт: 09:00–20:00</p>
+                    <p>Сб–Вс: 10:00–18:00</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=Москва+Ленинградский+проспект+36" target="_blank" class="btn-orange rounded-full px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em]">Маршрут</a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=Москва+Ленинградский+проспект+36" target="_blank" class="rounded-full border border-white/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10">Открыть карту</a>
+                </div>
+              </div>
+              <div class="overflow-hidden rounded-[28px] border border-white/10 bg-[#0d1012] p-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.572461008366!2d37.54259597692097!3d55.77624898055033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a06916c5c99%3A0x5b35791242e5cff2!2z0JjQuNC8LCDQn9C10YDQvtC20L3QviDQm9C10YDQtdC90LjRjw!5e0!3m2!1sru!2sru!4v1700000000000!5m2!1sru!2sru" class="h-[280px] w-full rounded-[24px] border border-white/5" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <label for="location-toggle" class="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-gray-100 cursor-pointer hover:bg-white/10 self-start">Закрыть</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-[1320px] px-6 lg:px-10 mt-10">
+      <p class="max-w-3xl text-sm leading-6 text-gray-500">ООО «АвтоФинанс» является кредитным посредником. Условия кредита и процентная ставка зависят от оценки платежеспособности клиента, наличия документов и одобрения банка. Изображения автомобилей носят иллюстративный характер. Подробности уточняйте у менеджера.</p>
+    </section>
+
+    <footer class="mx-auto max-w-[1320px] px-6 lg:px-10 mt-12 pb-10">
+      <div class="section-divider pt-7">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div class="space-y-2">
+            <p class="text-sm font-semibold text-gray-200">ООО «АвтоФинанс»</p>
+            <p class="text-sm text-gray-500">ИНН 7700000000 • ОГРН 1234567890123</p>
+          </div>
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div class="text-sm font-semibold"></div>
+            <button class="btn-orange rounded-full px-8 py-3 text-sm font-semibold uppercase tracking-[0.12em]">Позвонить</button>
+          </div>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-4 text-xs text-gray-500">
+          <a href="#" class="hover:text-white">Политика конфиденциальности</a>
+          <a href="#" class="hover:text-white">Публичная оферта</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
 
