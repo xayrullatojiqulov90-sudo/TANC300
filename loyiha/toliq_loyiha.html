@@ -157,7 +157,7 @@
                         <h5 class="text-text-muted text-base mr-96">Официальный дилер</h5>
                     </div>
                     <div class="text-white">
-                        <h3 class="text-white font-semibold">+998 94 321-85-15</h3>
+                        <h3 class="text-white font-semibold">+998 (94) 321-85-15</h3>
                         <div class="flex items-center gap-1.5 ml-[70px] text-text-light">
                             <img src="/img/icons/online.svg" alt="online">
                             <h6 class="text-sm">Мы на связи</h6>
@@ -576,11 +576,16 @@
 <!-- Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom-->
  <!-- Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom-->
   <!-- Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom-->
+   <!-- Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom-->
+    <!-- Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom Islom-->
 
 
   <main class="relative overflow-hidden">
     <section class="hero-section relative overflow-hidden">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,194,211,0.16),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(246,139,44,0.14),transparent_24%)] pointer-events-none"></div>
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style="background-image: url('/bg_car.svg');"
+      ></div>
       <div class="relative mx-auto max-w-[1320px] px-6 lg:px-10 py-16 lg:py-20">
         <div class="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] items-center">
           <div class="max-w-2xl">
@@ -589,7 +594,7 @@
             <p class="mt-6 max-w-xl text-base leading-7 text-gray-300">Оставьте заявку — мы подберём индивидуальные условия по автокредиту на лучшие премиальные модели. Ответ в течение 15 минут.</p>
             <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <label class="sr-only" for="phone">Telefon</label>
-              <input id="phone" type="tel" placeholder="+998 (___) ___-__-__" class="min-w-0 flex-1 rounded-[28px] border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-gray-500 focus:border-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-300/20" />
+              <input id="phone" type="tel" placeholder="+998 (___) ___-__-__" class="min-w-0 flex-1 rounded-[28px] border border-[#fff] bg-[#252C2C] px-5 py-4 text-white placeholder:text-gray-500 focus:border-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-300/20" />
               <button class="btn-orange rounded-[28px] px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em]">Отправить</button>
             </div>
           </div>
@@ -617,70 +622,181 @@
       </div>
     </section>
 
-    <section id="map-section" class="mt-10">
-      <div class="relative mx-auto max-w-[1320px] px-6 lg:px-10">
-        <div class="relative">
-          <input id="location-toggle" type="checkbox" class="peer hidden" />
-          <div class="relative overflow-hidden rounded-[36px] border border-white/10 bg-[#101316] transition duration-700 ease-in-out">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1800&auto=format&fit=crop&sat=-100" alt="Map" class="h-[540px] w-full object-cover object-center brightness-[0.45] contrast-[0.85] transition duration-700 ease-in-out transform peer-checked:scale-105 peer-checked:brightness-90 peer-checked:contrast-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#090a0c]/92 via-transparent to-transparent"></div>
-            <label for="location-toggle" class="absolute inset-0 cursor-pointer" aria-label="Открыть карту"></label>
-            <label for="location-toggle" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500/95 ring-4 ring-[#111316] shadow-[0_0_0_8px_rgba(0,0,0,0.38)] transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
-              <span class="h-3.5 w-3.5 rounded-full bg-white/90"></span>
-            </label>
+    <section id="map-section" class="mt-12">
+  <div class="mx-auto max-w-[1320px] px-6 lg:px-10">
+
+    <div class="overflow-hidden rounded-[18px] border border-[#E5E5E5] bg-white">
+
+      <!-- Xarita -->
+      <div class="relative h-[420px]">
+        <iframe
+          src="https://yandex.uz/map-widget/v1/?ll=68.886768%2C40.488745&z=17"
+          class="absolute inset-0 h-full w-full"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Pastki qora panel -->
+      <div class="bg-[#1F252A] px-8 py-6">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-[1.6fr_1fr_1fr_auto] lg:items-center">
+
+          <!-- Manzil -->
+          <div>
+            <p class="mb-1 text-xs text-gray-400">
+              Адрес
+            </p>
+
+            <p class="text-lg font-semibold text-white leading-snug">
+              Toshkent shahri, Chilonzor tumani,
+              Bunyodkor ko‘chasi 15
+            </p>
           </div>
 
+          <!-- Telefon -->
+          <div>
+            <p class="mb-1 text-xs text-gray-400">
+              Телефон
+            </p>
 
-          <div class="overflow-hidden transition-all duration-700 ease-in-out transform scale-[0.98] opacity-0 max-h-0 peer-checked:opacity-100 peer-checked:scale-100 peer-checked:max-h-[690px] peer-checked:mt-6">
-            <div class="map-panel rounded-[32px] p-6 lg:p-8 mt-4 shadow-[0_32px_80px_rgba(0,0,0,0.36)] bg-[#121418] border border-white/10 flex flex-col gap-6">
-              <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-                <div class="min-w-0">
-                  <p class="text-sm uppercase tracking-[0.24em] text-cyan-300/70 mb-2">Офис и сервис</p>
-                  <h3 class="text-2xl font-black leading-tight">Москва, Ленинградский проспект, 36</h3>
-                  <div class="mt-4 space-y-2 text-sm text-gray-400">
-                    <p>+998 (99) 123-45-67</p>
-                    <p>Пн–Пт: 09:00–20:00</p>
-                    <p>Сб–Вс: 10:00–18:00</p>
-                  </div>
-                </div>
-                <div class="flex flex-wrap gap-3">
-                  <a href="https://www.google.com/maps/dir/?api=1&destination=Москва+Ленинградский+проспект+36" target="_blank" class="btn-orange rounded-full px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em]">Маршрут</a>
-                  <a href="https://www.google.com/maps/search/?api=1&query=Москва+Ленинградский+проспект+36" target="_blank" class="rounded-full border border-white/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.12em] text-white hover:bg-white/10">Открыть карту</a>
-                </div>
-              </div>
-              <div class="overflow-hidden rounded-[28px] border border-white/10 bg-[#0d1012] p-3">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.572461008366!2d37.54259597692097!3d55.77624898055033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a06916c5c99%3A0x5b35791242e5cff2!2z0JjQuNC8LCDQn9C10YDQvtC20L3QviDQm9C10YDQtdC90LjRjw!5e0!3m2!1sru!2sru!4v1700000000000!5m2!1sru!2sru" class="h-[280px] w-full rounded-[24px] border border-white/5" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-              <label for="location-toggle" class="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-gray-100 cursor-pointer hover:bg-white/10 self-start">Закрыть</label>
-            </div>
+            <p class="text-lg font-semibold text-white">
+              +998 (94) 321-85-15
+            </p>
+
+            <p class="mt-1 text-sm text-[#3CD278]">
+              ● Biz aloqadamiz
+            </p>
           </div>
+
+          <!-- Ish vaqti -->
+          <div>
+            <p class="mb-1 text-xs text-gray-400">
+              Режим работы
+            </p>
+
+            <p class="text-lg font-semibold text-white">
+              Ежедневно
+            </p>
+
+            <p class="text-lg text-white">
+              с 09:00 до 21:00
+            </p>
+          </div>
+
+          <!-- Button -->
+          <div>
+            <button
+              class="flex items-center gap-3 rounded-xl bg-[#F68B2C] px-8 py-4 font-semibold text-[#1F252A] transition hover:bg-[#ff9b43]"
+            >
+              Заказать звонок
+              <span>›</span>
+            </button>
+          </div>
+
         </div>
       </div>
-    </section>
+
+    </div>
+
+  </div>
+</section>
 
     <section class="mx-auto max-w-[1320px] px-6 lg:px-10 mt-10">
       <p class="max-w-3xl text-sm leading-6 text-gray-500">ООО «АвтоФинанс» является кредитным посредником. Условия кредита и процентная ставка зависят от оценки платежеспособности клиента, наличия документов и одобрения банка. Изображения автомобилей носят иллюстративный характер. Подробности уточняйте у менеджера.</p>
     </section>
 
-    <footer class="mx-auto max-w-[1320px] px-6 lg:px-10 mt-12 pb-10">
+    <footer class="mx-auto max-w-[1320px] px-6 lg:px-10 mt-12 pb-0">
       <div class="section-divider pt-7">
-        <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-          <div class="space-y-2">
-            <p class="text-sm font-semibold text-gray-200">ООО «АвтоФинанс»</p>
-            <p class="text-sm text-gray-500">ИНН 7700000000 • ОГРН 1234567890123</p>
+
+        <!-- Main row -->
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+
+          <!-- LEFT: brand + address + legal -->
+          <div class="space-y-3">
+            <div>
+              <p class="text-sm font-bold text-gray-100">АВТОРУСЬ TANK Лосиный Остров</p>
+              <p class="text-xs text-gray-500">Официальный дилер</p>
+            </div>
+
+            <div class="flex items-start gap-1.5 text-xs text-gray-500">
+              <svg class="mt-0.5 shrink-0 text-gray-500" width="13" height="13" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+              <span>Ярославское шоссе, владение 2В, строение 3 (МКАД, 95 км)</span>
+            </div>
+
+            <div class="text-xs text-gray-500 leading-relaxed">
+              Официальный дилер<br>
+              <span class="text-gray-400 font-medium">ООО А АВТОРУСЬ МЫТИЩИ</span>
+              &nbsp;|&nbsp; ОГРН — 1147746695161, ИНН — 7728881903
+            </div>
           </div>
-          <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <div class="text-sm font-semibold"></div>
-            <button class="btn-orange rounded-full px-8 py-3 text-sm font-semibold uppercase tracking-[0.12em]">Позвонить</button>
+
+          <!-- RIGHT: phone + CTA + actions -->
+          <div class="flex flex-col items-start gap-3 lg:items-end">
+
+            <!-- Phone + online status -->
+            <div class="flex flex-col items-start gap-1 lg:items-end">
+              <span class="text-xl font-bold text-white tracking-wide">+998 (94) 321-85-15</span>
+              <span class="flex items-center gap-1.5 text-xs font-medium text-green-400">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-green-400"></span>
+                Мы на связи
+              </span>
+            </div>
+
+            <!-- Orange call button -->
+            <button class="btn-orange flex items-center gap-2 rounded px-5 py-2.5 text-xs font-semibold">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              Заказать звонок
+            </button>
+
+            <!-- Ghost actions -->
+            <div class="flex items-center gap-5">
+              <button class="flex items-center gap-1.5 text-xs text-gray-400 hover:text-white transition-colors">
+                <svg class="text-orange-500" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                Записаться на сервис
+              </button>
+
+              <button class="flex items-center gap-1.5 text-xs text-gray-400 hover:text-white transition-colors">
+                <svg class="text-orange-500" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <circle cx="12" cy="12" r="3"/>
+                  <line x1="12" y1="2" x2="12" y2="9"/>
+                  <line x1="4.22" y1="6.22" x2="9" y2="11"/>
+                  <line x1="19.78" y1="6.22" x2="15" y2="11"/>
+                </svg>
+                Тест-драйв
+              </button>
+            </div>
+
           </div>
         </div>
-        <div class="mt-6 flex flex-wrap gap-4 text-xs text-gray-500">
-          <a href="#" class="hover:text-white">Политика конфиденциальности</a>
-          <a href="#" class="hover:text-white">Публичная оферта</a>
+
+        <!-- Bottom bar -->
+        <div class="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 py-4 text-xs text-gray-500">
+          <span>© 2024, АВТОРУСЬ ТАНК</span>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-white transition-colors">Правовая информация</a>
+            <a href="#" class="hover:text-white transition-colors">Условия акции</a>
+          </div>
         </div>
+
       </div>
     </footer>
   </main>
 
 </body>
 </html>
+
+
